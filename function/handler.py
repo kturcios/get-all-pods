@@ -1,6 +1,7 @@
 from kubernetes import client, config
 
 def handle(req):
+   # Only works if this script is run by K8s as a POD
    config.load_incluster_config()
 
    v1 = client.CoreV1Api()
